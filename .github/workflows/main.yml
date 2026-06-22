@@ -10,3 +10,11 @@ jobs:
     steps:
       - name: print a welcome message
         run: echo "hi"
+
+      - name: checkout repository
+        uses: actions/checkout@v7.0.0
+
+      - name: list repoistory files
+        run: ls -la
+
+      
