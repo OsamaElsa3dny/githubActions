@@ -1,18 +1,9 @@
 on:
-  workflow_dispatch:
-    inputs:
-      enviroment:
-        description: "choose env"
-        required: true
-        default: "staging"
-        type: choice
-        options:
-          - staging
-          - production
+  repository_dispatch:
+    types: [incident_report]
 jobs:
-  deploy:
+  handel-incident:
     runs-on: ubuntu-latest
     steps:
-      - name: deploy application
-        run: echo "deploying app"
-        
+    - name: print inc details
+      run: echo "inc happen"
